@@ -1,0 +1,30 @@
+[
+    "introduction.html",
+    "why.html",
+    "example-orbitting-sonic.html",
+    "keyframes.html",
+    "sonic-walks-to-the-right.html",
+    "animation-duration.html",
+    [
+        "animation-timing-function.html",
+        "animation-timing-sonic-examples.html",
+        "bezier-curve.html",
+        "cubic-bezier-com.html"
+    ],
+    "animation-delay.html",
+    "animation-iteration-count.html",
+    [
+        "animation-direction.html",
+        "animation-direction-alternate.html"
+    ],
+    "animation-fill-mode.html",
+    "animation-play-state.html",
+    "shorthand-notation.html",
+    "transitions.html",
+    "example-transition.html",
+    "browser-support.html",
+    "browser-support-animations.html",
+    "browser-support-transitions.html",
+    "example-codepen.html",
+    "the-end.html"
+]

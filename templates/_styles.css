@@ -1,0 +1,220 @@
+.reveal section img.no-borders {
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.example-sonic-orbitting .sonic-orbit-container {
+  width: 164px;
+  height: 164px;
+  position: relative;
+  top: 17px;
+  left: 46px;
+
+  animation: spinning 1.5s linear infinite;
+}
+
+.example-sonic-orbitting .sonic {
+  position: absolute;
+  top: 128px;
+  left: 66px;
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+.example-sonic-orbitting {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 256px;
+  height: 256px;
+  background-color: #ffffff;
+  background-image: url('../resources/sonicloop.png');
+  overflow: visible;
+}
+
+.platform {
+  width: 600px;
+}
+
+.sonic {
+  width: 42px;
+  height: 42px;
+  display: inline-block;
+  background-image: url('../resources/sonicwaiting.gif');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  position: relative;
+}
+
+@keyframes run-to-the-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: 400px;
+  }
+}
+
+.example-run-to-the-right.fragment {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.example-run-to-the-right.fragment .sonic {
+  position: relative;
+}
+
+.example-run-to-the-right.fragment.visible.duration-fast .sonic {
+  animation-duration: 0.5s;
+}
+
+.example-run-to-the-right.fragment.visible.duration-slow .sonic {
+  animation-duration: 6s;
+  background-image: url('../resources/sonicwalking.gif');
+}
+
+.animation-timing-examples pre { margin: 0 auto 20px; }
+
+.example-run-to-the-right.fragment.visible.timing-linear .sonic {
+  animation-timing-function: linear;
+}
+
+.example-run-to-the-right.fragment.visible.timing-ease .sonic {
+  animation-timing-function: ease;
+}
+
+.example-run-to-the-right.fragment.visible.timing-ease-in .sonic {
+  animation-timing-function: ease-in;
+}
+
+.example-run-to-the-right.fragment.visible.timing-ease-out .sonic {
+  animation-timing-function: ease-out;
+}
+
+.example-run-to-the-right.fragment.visible.timing-ease-in-out .sonic {
+  animation-timing-function: ease-in-out;
+}
+
+.example-run-to-the-right.fragment.visible.delay-slow .sonic {
+  animation-delay: 0s;
+}
+
+.example-run-to-the-right.fragment.visible.delay-slow .sonic {
+  animation-delay: 3s;
+}
+
+.example-run-to-the-right.fragment.visible.delay-very-slow .sonic {
+  animation-delay: 8s;
+}
+
+.example-run-to-the-right.fragment.visible.iteration-0 .sonic {
+  animation-iteration-count: 0;
+}
+
+.example-run-to-the-right.fragment.visible.iteration-5 .sonic {
+  animation-iteration-count: 5;
+}
+
+.example-run-to-the-right.fragment.visible.iteration-infinite .sonic {
+  animation-iteration-count: infinite;
+}
+
+.example-run-to-the-right.fragment.visible.direction-normal .sonic {
+  animation-direction: normal;
+  animation-duration: 3s;
+  background-image: url('../resources/sonicwalking.gif');
+}
+
+.example-run-to-the-right.fragment.visible.direction-reverse .sonic {
+  animation-direction: reverse;
+  animation-duration: 3s;
+  background-image: url('../resources/sonicwalking.gif');
+}
+
+.example-run-to-the-right.fragment.visible.direction-alternate .sonic {
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-duration: 3s;
+  background-image: url('../resources/sonicwalking.gif');
+}
+
+.example-run-to-the-right.fragment.visible.direction-alternate-reverse .sonic {
+  animation-iteration-count: 2;
+  animation-direction: alternate-reverse;
+  animation-duration: 3s;
+  background-image: url('../resources/sonicwalking.gif');
+}
+
+.example-run-to-the-right.fragment.visible.fill-mode-none .sonic {
+  animation-fill-mode: none;
+}
+
+.example-run-to-the-right.fragment.visible.fill-mode-forwards .sonic {
+  animation-fill-mode: forwards;
+}
+
+.example-run-to-the-right.fragment.visible.fill-mode-backwards .sonic {
+  animation-fill-mode: backwards;
+}
+
+.example-run-to-the-right.fragment.visible.fill-mode-both .sonic {
+  animation-fill-mode: both;
+}
+
+.example-run-to-the-right.fragment.visible.play-state-paused .sonic {
+  background-image: url('../resources/sonicwaiting.gif');
+  animation-play-state: paused;
+}
+
+.example-run-to-the-right.fragment.visible.play-state-running .sonic {
+  animation-play-state: running;
+}
+
+.example-run-to-the-right.fragment.visible .sonic {
+  background-image: url('../resources/sonicrunning.gif');
+  animation-name: run-to-the-right;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+
+.example-to-the-right.with-transition .sonic {
+  transition: left 1s linear;
+}
+
+.example-to-the-right .sonic {
+  left: 0;
+}
+
+.example-to-the-right:hover .sonic {
+  left: 400px;
+  background-image: url('../resources/sonicwalking.gif');
+}
+
+@keyframes flying {
+  0% { top: 7px; }
+  50%   { top: -7px; }
+  100%   { top: 7px; }
+}
+
+.tails {
+  width: 100px;
+  position: relative;
+  animation: flying 3s ease infinite;
+}
